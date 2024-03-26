@@ -1,0 +1,27 @@
+
+h1 { 
+    text-align: center;
+    color: black;
+    margin: left: 20px;
+}
+
+body {
+    background-color: lightsteelblue;
+    
+}
+p {
+    text-align: center;
+    text-decoration: solid;
+    ;
+}
+
+
+table {
+    width: 100%; /* Ancho de la tabla */
+    border-collapse: collapse; /* Colapso de bordes */
+}
+td, th {
+    border: 2px solid;
+    padding: 8px;
+}
+
