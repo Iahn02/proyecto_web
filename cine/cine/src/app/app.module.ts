@@ -12,6 +12,7 @@ import { MoviesComponent } from './Views/movies/movies.component';
 import { CartComponent } from './Views/cart/cart.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { DestacadasComponent } from './Views/destacadas/destacadas.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { DestacadasComponent } from './Views/destacadas/destacadas.component';
     NavbarComponent,
     HomeComponent,
     DestacadasComponent,
+    FooterComponent,
     MoviesComponent,
     CartComponent
     
