@@ -1,0 +1,28 @@
+.contact-container {
+  background-color: #f2f2f2;
+  color: #1a1a1a;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #e50914;
+  border-color: #e50914;
+}
+
+.btn-primary:hover {
+  background-color: #b20710;
+  border-color: #b20710;
+}
+
+.form-control {
+  border-radius: 0.25rem;
+}
