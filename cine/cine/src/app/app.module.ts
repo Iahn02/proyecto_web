@@ -2,9 +2,9 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CommonModule } from '@angular/common'; // Importa CommonModule
+import { CommonModule } from '@angular/common'; 
 import { ContactComponent } from './Views/contact/contact.component';
-import { CarouselComponent } from './shared/carousel/carousel.component'; // Asegúrate de importar el componente
+import { CarouselComponent } from './shared/carousel/carousel.component'; 
 import { HomeComponent } from './Views/home/home.component';
 import { TicketService } from './services/ticket.service';
 import { FormsModule } from '@angular/forms';

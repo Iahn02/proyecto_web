@@ -71,18 +71,17 @@ export class MoviesComponent implements OnInit {
   }
 
   buyTicket(): void {
-    // Asegúrate de que 'type' sea 'child' o 'adult'. Si no, establece un valor predeterminado.
     const ticketType: 'child' | 'adult' = (this.type === 'child' || this.type === 'adult') ? this.type : 'adult'; 
   
     const ticket = {
       Id: this.movie.id,
-      movieName: this.movie.title, // Aquí se manda el nombre de la película como 'movieName'
+      movieName: this.movie.title, 
       type: ticketType,
       quantity: this.quantity
     };
   
-    this.ticketService.buyTicket(ticket); // Llamamos al servicio para comprar el ticket
-    alert('Ticket comprado con éxito'); // Mensaje de confirmación
+    this.ticketService.buyTicket(ticket); 
+    alert('Ticket comprado con éxito'); 
   console.log('Tickets disponibles:', this.ticketService.getTickets());
 
   }
