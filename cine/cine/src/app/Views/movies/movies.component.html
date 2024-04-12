@@ -1,0 +1,56 @@
+<div class="movie-view">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+            <br>
+            <br>
+          <img src="{{movie.imageUrl}}" alt="{{movie.title}}" style="width: 500px; height: auto;">
+        </div>
+        <div class="col-md-6">
+          <h2>{{movie.title}}</h2>
+          <p><strong>Género:</strong> {{movie.genre}}</p>
+          <p><strong>Año:</strong> {{movie.year}}</p>
+          <p><strong>Duración:</strong> {{movie.duration}} minutos</p>
+          <p><strong>Director:</strong> {{movie.director}}</p>
+          <p><strong>Actores:</strong> {{movie.actors.join(', ')}}</p>
+          <p><strong>Sinopsis:</strong> {{movie.synopsis}}</p>
+          <!-- Modal -->
+          <div>
+            <h3 style="text-align: center;">Tráiler</h3>
+            <div class="trailer-container" style="margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <video  width="100%" height="auto" controls>
+                <source [src]="movie.trailerUrl" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+      
+      </div>
+      <div class="col-md-12" style="display: flex; justify-content: center;">
+        <div style="width: 50%;">
+          <h3 style="text-align: center;">Compra de Tickets</h3>
+          <form (ngSubmit)="buyTicket()" style="margin-top: 20px;">
+            <div class="form-group">
+              <label for="movieType">Tipo de Ticket:</label>
+              <select [(ngModel)]="type" name="type" id="movieType" class="form-control">
+                <option value="child">Niño</option>
+                <option value="adult">Adulto</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Cantidad:</label>
+              <input type="number" [(ngModel)]="quantity" name="quantity" id="quantity" min="1" class="form-control">
+            </div>
+            <input type="hidden" [(ngModel)]="movie.title" name="movieTitle">
+            <br>
+            <div style="display: flex; justify-content: center;">
+              <button type="submit" class="btn btn-primary">Comprar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

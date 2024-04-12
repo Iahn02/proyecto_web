@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <h2 class="text-center text-primary mb-4">Tu Carrito</h2>
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre de la Película</th>
+          <th scope="col">Tipo de Ticket</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ item.movieName }}</td>
+          <td>{{ item.type === 'child' ? 'Niño' : 'Adulto' }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="removeItemFromCart(item.Id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="text-center mt-3">
+        <br>
+      <h4>Total a pagar: {{ total }}</h4>
+      <br>
+      
+      <button class="btn btn-success" (click)="pagarAhora()">Pagar Ahora</button>
+    </div>
+    <div *ngIf="pagoRealizado">
+      <h2 class="text-center text-success mt-5">¡Pongámosle un 7, Profe!</h2>
+    </div>
+  </div>
+  <ng-template #emptyCart>
+    <p class="text-center">Tu carrito está vacío.</p>
+  </ng-template>
+</div>
