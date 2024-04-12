@@ -1,0 +1,53 @@
+.movie-view {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .row {
+    margin-top: 20px;
+  }
+  
+  .col-md-6 img {
+    border: 5px solid #f2f2f2;
+    border-radius: 10px;
+  }
+  
+  .col-md-6 h2, .col-md-6 p {
+    color: #f2f2f2;
+  }
+  
+  .trailer-container {
+    border: 3px solid #f2f2f2;
+  }
+  
+  .btn-primary {
+    background-color: #e50914;
+    border-color: #e50914;
+  }
+  
+  .btn-primary:hover {
+    background-color: #b20710;
+    border-color: #b20710;
+  }
+  
+  .form-control {
+    background-color: #333;
+    color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+  }
+  
+  .form-control:focus {
+    background-color: #333;
+    border-color: #e50914;
+    box-shadow: none;
+  }
+  
+  label {
+    color: #f2f2f2;
+  }
+  

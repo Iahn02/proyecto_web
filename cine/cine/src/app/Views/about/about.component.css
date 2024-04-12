@@ -1,0 +1,27 @@
+.about-section {
+  background-color: #f2f2f2;
+  color: #1a1a1a;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: #e50914; 
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.fs-5 {
+  font-size: 1.25rem;
+}
