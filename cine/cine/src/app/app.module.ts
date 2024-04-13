@@ -13,6 +13,9 @@ import { CartComponent } from './Views/cart/cart.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { DestacadasComponent } from './Views/destacadas/destacadas.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -25,13 +28,15 @@ import { FooterComponent } from './shared/footer/footer.component';
     DestacadasComponent,
     FooterComponent,
     MoviesComponent,
-    CartComponent
+    CartComponent,
+    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
