@@ -12,7 +12,7 @@ export class ContactComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
     this.contactForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email, Validators.pattern(/^[^@]+@[^@]*mail/)]],
       message: ['', [Validators.required, Validators.minLength(10)]]
     });
   }
@@ -23,7 +23,6 @@ export class ContactComponent implements OnInit {
   onSubmit() {
     if (this.contactForm.valid) {
       console.log(this.contactForm.value);
-      // Aquí iría el código para enviar los datos del formulario
     }
   }
   isFieldInvalid(field: string): boolean {
@@ -31,8 +30,7 @@ export class ContactComponent implements OnInit {
     return !!control && control.invalid && (control.dirty || control.touched);
   }
 
-  // Método para obtener el mensaje de error específico de un campo
-// Método para obtener el mensaje de error específico de un campo
+
 getErrorMessage(field: string): string {
   const control = this.contactForm.get(field);
   if (control && control.errors) {
@@ -42,10 +40,11 @@ getErrorMessage(field: string): string {
       return 'El correo electrónico no es válido.';
     } else if (control.errors['minlength']) {
       return `Este campo debe tener al menos ${control.errors['minlength'].requiredLength} caracteres.`;
-
+    } else if (control.errors['pattern']) {
+      return 'El correo electrónico debe contener "mail" después del "@".';
     }
   }
-  return ''; // Ensure a string is always returned
+  return ''; 
 }
 
 }

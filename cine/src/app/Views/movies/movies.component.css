@@ -50,3 +50,10 @@
 label {
   color: #f2f2f2;
 }
+
+@media(max-width: 500px){
+  .contenedorFlex{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
